@@ -1,0 +1,2999 @@
+:root {
+    --color-primary: #1a4273;
+    --color-primary-light: #f4f7fa;
+    --color-primary-muted: #486588;
+    --color-hero-bg-start: #3a6b9a;
+    --color-hero-bg-end: #2d5581;
+    --color-btn-dark: #163E73;
+    --color-btn-dark-hover: #112743;
+    --color-text-muted: #b5cbe4;
+    --color-border-light: rgba(255, 255, 255, 0.2);
+    --color-text-dark: #1e3046;
+    --color-text-gray: #556b82;
+    --color-card-border: rgba(255, 255, 255, 0.15);
+    --color-card-bg-hover: rgba(255, 255, 255, 0.05);
+    --color-icon-gold: #cba365;
+    --color-bg: #fdfdfd;
+    --color-text-main: #1e293b;
+    --color-primary-light: #eff6ff;
+    --color-border: #e2e8f0;
+    --color-border-badge: #bfdbfe;
+    --color-text-badge: #1e3a8a;
+    --color-accent-blue: #0066cc;
+    --color-text-main: #333333;
+    --color-bg-light: #fafafa;
+    --color-primary-hover: #123156;
+    --color-bg-page: #f8fafc;
+    --color-bg-light-second: #E7EAF7;
+    --color-primary-light: #2a6a9b;
+    --color-text-muted: #758698;
+    --color-border: #d2dce6;
+    --color-bg-light: #fafcff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.gt_switcher_wrapper {
+    display: none;
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+
+.site-header {
+    background-color: var(--color-btn-dark);
+    color: #ffffff;
+    padding: 15px 30px 10px;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    max-width: 280px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.search-container {
+    margin-right: 10px;
+    flex-grow: 1;
+    max-width: 450px;
+    position: relative;
+}
+
+.search-container input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    padding: 0 45px 0 20px;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+}
+
+.search-container input::placeholder {
+    color: var(--color-border-badge);
+}
+
+.search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-btn-dark-hover);
+}
+
+
+.contacts-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.phone-icon-wrap {
+    width: 38px;
+    height: 38px;
+    background-color: var(--color-hero-bg-start);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-icon-wrap svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+
+.contact-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.contact-text-group .small-label {
+    font-size: 11px;
+    color: var(--color-border-badge);
+}
+
+.contact-text-group .right-align {
+    text-align: right;
+}
+
+.contact-link {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.divider {
+    width: 1px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.social-icon {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.social-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+}
+
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main-nav {
+    display: flex;
+    gap: 35px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: opacity 0.2s;
+}
+
+.main-nav>a:hover {
+    opacity: 0.8;
+}
+
+.header-address {
+    font-size: 12px;
+    color: var(--color-border-badge);
+    text-align: right;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+
+.dropdown-trigger svg {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+
+.custom-dropdown:hover .dropdown-trigger svg {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    width: 500px;
+    max-width: 80vw;
+    padding: 8px 0;
+    z-index: 100;
+
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+
+.custom-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.custom-dropdown:hover .dropdown-trigger svg,
+.custom-dropdown.is-open .dropdown-trigger svg {
+    transform: rotate(180deg);
+}
+
+
+.custom-dropdown:hover .dropdown-menu,
+.custom-dropdown.is-open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.custom-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #1a4273 !important;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f4f8;
+    color: var(--color-btn-dark-hover) !important;
+    opacity: 1;
+}
+
+
+.lang-switcher .dropdown-trigger {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.lang-switcher .dropdown-menu {
+    min-width: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+}
+
+.lang-switcher:hover .dropdown-menu {
+    transform: translateX(-50%) translateY(0);
+}
+
+.lang-switcher .dropdown-menu a {
+    text-align: center;
+    padding: 8px 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-dark-square {
+    background-color: var(--color-btn-dark);
+    color: white;
+    width: 60px;
+    height: 60px;
+}
+
+.btn-dark-rect {
+    background-color: var(--color-btn-dark);
+    color: white;
+    height: 60px;
+    padding: 0 20px;
+    gap: 15px;
+    text-align: left;
+}
+
+.btn:hover {
+    background-color: var(--color-btn-dark-hover);
+}
+
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    z-index: 101;
+    margin-left: 15px;
+}
+
+.burger-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.burger-btn span:nth-child(1) {
+    top: 0;
+}
+
+.burger-btn span:nth-child(2) {
+    top: 10px;
+}
+
+.burger-btn span:nth-child(3) {
+    bottom: 0;
+}
+
+.burger-btn.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.burger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .burger-btn {
+        display: block;
+    }
+
+
+    .header-top {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+
+    .logo {
+        max-width: 200px;
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .lang-switcher {
+        margin-left: auto;
+    }
+
+
+    .search-container,
+    .contacts-wrapper,
+    .social-icons,
+    .header-bottom {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* ========================================= 
+       КОЛИ МЕНЮ ВІДКРИТЕ (Через JS)
+       ========================================= */
+    .site-header.menu-open .search-container,
+    .site-header.menu-open .contacts-wrapper,
+    .site-header.menu-open .social-icons,
+    .site-header.menu-open .header-bottom {
+        display: flex;
+        justify-content: center;
+        animation: fadeIn 0.4s ease forwards;
+    }
+
+    .site-header.menu-open .contacts-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .site-header.menu-open .divider {
+        display: none;
+    }
+
+    .site-header.menu-open .header-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+    }
+
+    .site-header.menu-open .main-nav {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .custom-dropdown {
+        text-align: center;
+    }
+
+    .main-nav a {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .site-header.menu-open .header-address {
+        text-align: left;
+    }
+
+    .contact-text-group .right-align {
+        text-align: center;
+    }
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* =========================================
+           СТИЛІ HERO СЕКЦІЇ
+========================================= */
+.hero-banner {
+
+    background: linear-gradient(90deg, var(--color-hero-bg-start) 0%, var(--color-hero-bg-end) 100%);
+
+    color: white;
+    padding: 70px 0;
+    min-height: 400px;
+
+    display: flex;
+    align-items: stretch;
+}
+
+.hero-grid {
+
+    background-image: url('../images/background1.png'), linear-gradient(90deg, var(--color-hero-bg-start), var(--color-hero-bg-end));
+
+    background-size: contain;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-blend-mode: overlay;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+
+    gap: 40px;
+    width: 100%;
+}
+
+
+.hero-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.hero-title {
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: var(--color-border-badge);
+    line-height: 1.5;
+    max-width: 650px;
+}
+
+
+.hero-consult-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.hero-consult-text {
+    font-size: 13px;
+    color: var(--color-border-badge);
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+
+.hero-actions {
+    display: flex;
+    gap: 5px;
+
+}
+
+.btn-text-lines {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.hero-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .btn-dark-square {
+        width: 100%;
+    }
+}
+
+/* =========================================
+           БІЛА ВСТУПНА СЕКЦІЯ
+        ========================================= */
+
+.intro-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+    align-items: start;
+}
+
+
+.intro-title {
+    color: var(--color-text-dark);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.intro-subtitle {
+    color: var(--color-text-gray);
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+
+.intro-text-block p {
+    color: var(--color-text-gray);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro-text-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================= */
+/* СЕКЦІЯ КАРТОК ПЛАТФОРМИ
+=========================================  */
+.platform-section {
+    background-color: var(--color-primary);
+    padding: 80px 0;
+    color: #ffffff;
+}
+
+.platform-title {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+.cards-grid-centered {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.platform-card {
+    background-color: transparent;
+    border: 1px solid var(--color-card-border);
+    border-radius: 8px;
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.cards-grid-centered .platform-card {
+    width: calc(25% - 15px);
+
+    min-width: 250px;
+}
+
+.platform-card:hover {
+    background-color: var(--color-card-bg-hover);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.card-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.card-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.card-content p {
+    font-size: 11px;
+    color: #a4b8d1;
+    line-height: 1.3;
+}
+
+
+.card-arrow {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 12px;
+    height: 12px;
+    stroke: #ffffff;
+    stroke-width: 2;
+    fill: none;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.platform-card:hover .card-arrow {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
+
+@media (max-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards-grid-centered .platform-card {
+        width: calc(33.333% - 14px);
+    }
+}
+
+@media (max-width: 900px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-grid-centered .platform-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cards-grid,
+    .cards-grid-centered {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-grid-centered .platform-card {
+        width: 100%;
+    }
+}
+
+/* =========================================
+           СЕКЦІЯ "НАШІ ПАРТНЕРИ"
+========================================= */
+
+.partners-section {
+    padding: 40px 0 80px;
+    background-color: var(--color-primary);
+    color: #fff;
+    background-image:
+        linear-gradient(rgba(26, 66, 115, 0.8),
+            /* 0.8 - це 80% непрозорості кольору (ховає картинку) */
+            rgba(26, 66, 115, 0.8)),
+        url('../images/background2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -10vw center;
+
+}
+
+.partners-section .section-title {
+    color: #fff;
+}
+
+.partners-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    overflow-x: auto;
+    /* Скрол на мобільних, якщо не влазить */
+    padding-bottom: 10px;
+}
+
+.partner-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    height: 120px;
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.partner-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================
+           СЕКЦІЯ "ЗАДАЙТЕ ПИТАННЯ"
+        ========================================= */
+.contact-section {
+    padding: 40px 0 80px;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 40px 0 100px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* --- Ліва колонка (Текст) --- */
+.contact-info {
+    padding-right: 60px;
+    border-right: 1px solid var(--color-border-light);
+    /* Вертикальна лінія */
+}
+
+.contact-title {
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.contact-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0eaf5;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: 20px;
+    color: #e0eaf5;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contact-list li {
+    position: relative;
+    padding-left: 15px;
+}
+
+.contact-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+/* --- Права колонка (Форма) --- */
+.contact-form-wrapper {
+    padding-left: 20px;
+}
+
+.form-intro {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.consult-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.consult-form input {
+    width: 100%;
+    height: 46px;
+    padding: 0 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.consult-form input::placeholder {
+    color: #90a4ae;
+}
+
+/* Інпут телефону з "прапорцем" */
+/* ОНОВЛЕНО: Прибрано overflow: hidden, щоб меню могло випадати */
+.phone-input-group {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 46px;
+    /* Фіксуємо висоту */
+}
+
+.phone-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+/* ОНОВЛЕНО: Відступи тепер тут, а не в батьківському блоці */
+.phone-prefix {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    border-right: 1px solid #ddd;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 100%;
+    user-select: none;
+}
+
+/* Стилізація самого меню вибору кодів */
+.phone-dropdown .dropdown-menu {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    z-index: 100;
+
+    /* Анімація появи (як у хедері) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.phone-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Контейнер дропдауну */
+.phone-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Меню, яке за замовчуванням приховане */
+.phone-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    min-width: 160px;
+    margin-top: 5px;
+}
+
+/* Клас, який додаватиметься через JS для показу меню */
+.phone-dropdown .dropdown-menu.show {
+    display: block;
+}
+
+/* Елементи списку країн */
+.dropdown-menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu-item:hover {
+    background: #f5f5f5;
+}
+
+/* Окремі пункти меню */
+.dropdown-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-text-muted);
+    color: var(--color-btn-dark);
+}
+
+/* Поле вводу */
+.phone-input-group input {
+    border-radius: 0 4px 4px 0;
+    flex-grow: 1;
+    border: none;
+    padding: 0 15px;
+    height: 100%;
+    outline: none;
+}
+
+/* Чекбокс */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.checkbox-label input {
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+/* Низ форми (Кнопка + Аватарки) */
+.form-footer {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #7db9ff 0%, #5296fb 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0 30px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(82, 150, 251, 0.4);
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+.specialists-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    background-color: #ddd;
+    margin-left: -10px;
+    /* Накладання аватарок */
+    object-fit: cover;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.specialists-text {
+    font-size: 11px;
+    color: #e0eaf5;
+    line-height: 1.3;
+    max-width: 150px;
+}
+
+/* --- Адаптивність --- */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border-light);
+        padding-bottom: 40px;
+    }
+
+    .contact-form-wrapper {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+.news-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.news-header {
+    margin-bottom: 40px;
+}
+
+.news-section-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.news-subtitle {
+    font-size: 14px;
+    color: #333333;
+    max-width: 400px;
+    line-height: 1.4;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+/* -----------------------------------------
+           КОМПОНЕНТ: КАРТКА НОВИНИ (ДЛЯ ПЕРЕВИКОРИСТАННЯ)
+           ----------------------------------------- */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    min-width: 260px;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #24528a 0%, #16a0d4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Заглушка для логотипу всередині картинки */
+.news-card-image img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.news-card-date {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.news-card-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111111;
+    line-height: 1.4;
+}
+
+/* ----------------------------------------- */
+
+
+/* =========================================
+           ФУТЕР
+        ========================================= */
+.site-footer {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 60px 0 40px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+}
+
+/* --- Колонка 1: Лого та Контакти --- */
+.footer-col-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-logo {
+    max-width: 280px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-label {
+    font-size: 11px;
+    color: var(--color-footer-text);
+}
+
+.footer-value {
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.footer-value.schedule {
+    font-size: 13px;
+}
+
+/* --- Колонки 2 та 3: Навігація --- */
+.footer-col-nav {
+    padding-top: 70px;
+    /* Вирівнювання по вертикалі відносно контактів */
+}
+
+.footer-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.footer-nav-list a:hover {
+    color: var(--color-footer-text);
+}
+
+/* --- Колонка 4: Карта --- */
+.footer-col-map {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.footer-col-map iframe,
+.footer-col-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+}
+
+/* --- Адаптивність --- */
+@media (max-width: 1100px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .footer-col-nav {
+        padding-top: 0;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-col-map {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+           ШАПКА СТОРІНКИ
+        ========================================= */
+.page-header {
+    padding-bottom: 20px;
+    border-bottom: 2.5px solid var(--color-hero-bg-start);
+    margin-bottom: 40px;
+}
+
+/* Тег/Бейдж над заголовком */
+.category-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background-color: var(--color-bg-light-second);
+    border: 1px solid var(--color-border-badge);
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-text-badge);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.category-tag .dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    font-size: 16px;
+    color: var(--color-text-gray);
+}
+
+/* =========================================
+           ТАБЛИЦЯ СТАНДАРТІВ (КАРТКА)
+        ========================================= */
+.standards-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+.table-row {
+    display: grid;
+    grid-template-columns: 50px 220px 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--color-border);
+    min-width: 800px;
+
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+
+.table-header {
+    background-color: #f8fafc;
+    border-bottom: 1px solid var(--color-border);
+    padding: 15px 30px;
+}
+
+.table-header .col-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+.col-num {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.col-std {
+    width: max-content;
+}
+
+
+.std-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--color-bg-light-second);
+    border: 1px solid var(--color-border-badge);
+    border-radius: 4px;
+    color: var(--color-text-badge);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+.col-name {
+    font-size: 14px;
+    color: var(--color-text-main);
+    line-height: 1.5;
+}
+
+
+.table-body .table-row {
+    transition: background-color 0.2s ease;
+}
+
+.table-body .table-row:hover {
+    background-color: #fcfdff;
+}
+
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 32px;
+    }
+
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* =========================================
+           ЗАГОЛОВКИ СЕКЦІЙ
+        ========================================= */
+.section-block {
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 25px;
+}
+
+.heading-number {
+    color: var(--color-primary);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* =========================================
+           ТЕКСТОВІ БЛОКИ ТА ПАНЕЛІ
+        ========================================= */
+/* Світла панель (Визначення) */
+.info-panel-light {
+    background-color: var(--color-bg-light);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    color: var(--color-text-dark);
+}
+
+.info-panel-light strong {
+    color: var(--color-primary);
+}
+
+/* Звичайний текст опису */
+.section-description {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Темна панель (Медичні вироби) */
+.info-panel-dark {
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-muted));
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-panel-dark strong {
+    font-weight: 600;
+}
+
+/* =========================================
+           СПИСКИ
+        ========================================= */
+/* Список з крапками (Методи обробки) */
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.bullet-list li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.bullet-list li strong {
+    color: var(--color-btn-dark-hover);
+}
+
+.bullet-list li::marker {
+    color: var(--color-btn-dark);
+}
+
+/* Список без крапок (Галузі застосування) */
+.clean-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.clean-list li {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: var(--color-text-main);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 22px;
+    }
+
+    .heading-number {
+        font-size: 24px;
+    }
+
+    .info-panel-light,
+    .info-panel-dark {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+           ЗАГОЛОВКИ СЕКЦІЙ
+        ========================================= */
+.section-block {
+    margin-bottom: 60px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Коротка синя лінія під заголовком */
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 45px;
+    height: 3px;
+    background-color: var(--color-primary);
+}
+
+.heading-number {
+    color: var(--color-primary);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Звичайний текст опису */
+.section-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--color-text-main);
+    line-height: 1.6;
+}
+
+.section-description strong {
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+/* =========================================
+           БЛОК 03: КАРТКИ SAL
+        ========================================= */
+.sal-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.sal-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border-card);
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: box-shadow 0.3s ease;
+}
+
+.sal-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sal-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.sal-card p {
+    font-size: 14px;
+    color: var(--color-text-main);
+}
+
+/* =========================================
+           БЛОК 04: ПІДЗАГОЛОВКИ ТА СПИСКИ
+        ========================================= */
+.sub-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 40px 0 15px;
+}
+
+
+.indented-list {
+    list-style: none;
+    padding-left: 30px;
+    margin-top: 15px;
+}
+
+.indented-list li {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--color-text-main);
+}
+
+
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 22px;
+    }
+
+    .heading-number {
+        font-size: 24px;
+    }
+
+    .sal-card {
+        padding: 20px;
+    }
+
+    .indented-list {
+        padding-left: 15px;
+    }
+}
+
+/* =========================================
+           ШАПКА СЕКЦІЇ (СИНІЙ ФОН)
+        ========================================= */
+.comparison-header {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.comparison-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.comparison-subtitle {
+    font-size: 14px;
+    color: #b5cbe4;
+}
+
+/* =========================================
+           ТАБЛИЦЯ (CSS GRID)
+        ========================================= */
+.comparison-table-wrapper {
+    margin-top: 30px;
+    padding-bottom: 60px;
+}
+
+.comparison-table {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+
+.t-row {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.t-row:last-child {
+    border-bottom: none;
+}
+
+
+.t-head {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: none;
+}
+
+
+.t-col {
+    padding: 25px;
+}
+
+.t-head .t-col {
+    padding: 15px 25px;
+}
+
+
+.col-method {
+    background-color: var(--color-border);
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 14px;
+    border-right: 1px solid var(--color-border);
+}
+
+
+.col-adv,
+.col-disadv {
+    font-size: 13px;
+    border-style: solid;
+    border-color: var(--color-primary-muted);
+    border-width: 0 1px 1px 1px;
+}
+
+.col-adv {
+    border-right: 1px solid var(--color-border);
+}
+
+
+.dash-list {
+    list-style: none;
+}
+
+.dash-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.dash-list li:last-child {
+    margin-bottom: 0;
+}
+
+.dash-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+
+@media (max-width: 900px) {
+    .t-row {
+        grid-template-columns: 1fr;
+    }
+
+    .t-head {
+        display: none;
+
+    }
+
+    .col-method {
+        background-color: var(--color-border-badge);
+        color: #ffffff;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+
+    .col-adv {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+
+    .col-adv::before {
+        content: 'Переваги:';
+        display: block;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .col-disadv::before {
+        content: 'Недоліки:';
+        display: block;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+           ВЕРХНІ НАВІГАЦІЙНІ КАРТКИ
+        ========================================= */
+.nav-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.nav-card {
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-muted));
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 80px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-card:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.nav-card span {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 85%;
+}
+
+.nav-card-arrow {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin-top: 2px;
+}
+
+/* =========================================
+           ОСНОВНИЙ КОНТЕНТ (ТЕКСТ + СХЕМИ)
+        ========================================= */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* Ліва колонка - Текст */
+.text-column p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555555;
+    text-align: justify;
+}
+
+.text-column p:last-child {
+    margin-bottom: 0;
+}
+
+/* Права колонка - Зображення */
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Відстань між схемами */
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #eaeaea;
+    /* Легка рамка навколо схем */
+    border-radius: 4px;
+}
+
+/* =========================================
+           АДАПТИВНІСТЬ
+        ========================================= */
+@media (max-width: 1024px) {
+    .nav-cards-grid {
+        margin-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .text-column p {
+        text-align: left;
+        /* На мобільному краще вирівнювати по лівому краю */
+    }
+}
+
+/* =========================================
+           ШАПКА СЕКЦІЇ
+        ========================================= */
+.join-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.join-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.join-subtitle {
+    font-size: 15px;
+    color: var(--color-text-gray);
+}
+
+/* =========================================
+           СІТКА КАРТОК
+        ========================================= */
+.join-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Сама картка */
+.join-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.02);
+    transition: box-shadow 0.3s ease;
+}
+
+.join-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Обгортка контенту (розтягується, щоб притиснути кнопки до низу) */
+.card-content {
+    flex-grow: 1;
+}
+
+/* Елементи картки */
+.card-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.join-card .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.join-card .card-desc {
+    font-size: 14px;
+    color: var(--color-text-gray);
+    margin-bottom: 15px;
+}
+
+.join-card .card-desc strong {
+    color: var(--color-text-gray);
+    font-weight: 600;
+}
+
+.join-card .card-list-intro {
+    font-size: 14px;
+    color: var(--color-text-gray);
+    margin-bottom: 15px;
+}
+
+/* Кастомний список з синіми крапками */
+.card-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.card-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    color: var(--color-text-gray);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent-blue);
+    border-radius: 50%;
+}
+
+/* =========================================
+           КНОПКИ
+        ========================================= */
+.card-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    /* Кнопки займають однакову ширину */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: #123156;
+    border-color: #123156;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+}
+
+.btn-outline:hover {
+    border-color: #bbbbbb;
+    background-color: #f9f9f9;
+}
+
+/* =========================================
+           АДАПТИВНІСТЬ
+        ========================================= */
+@media (max-width: 992px) {
+    .join-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .join-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .join-title {
+        font-size: 28px;
+    }
+}
+
+/* =========================================
+           ШАПКА СЕКЦІЇ
+        ========================================= */
+.section-header {
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    color: var(--color-text-gray);
+}
+
+/* =========================================
+           ТАБЛИЦЯ ПОСИЛАНЬ (CSS GRID)
+        ========================================= */
+.links-table {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 60px 200px 1fr;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.2s ease;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+
+.table-head {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+}
+
+.table-head:hover {
+    background-color: var(--color-primary);
+
+}
+
+.table-row:hover:not(.table-head) {
+    background-color: #f1f5f9;
+}
+
+
+.col-id,
+.col-resource,
+.col-action {
+    padding: 20px;
+}
+
+.table-head .col-id,
+.table-head .col-resource,
+.table-head .col-action {
+    padding: 15px 20px;
+}
+
+
+.col-id {
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.table-head .col-id {
+    color: #ffffff;
+}
+
+
+.resource-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.resource-url {
+    display: block;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+
+.table-row:hover .resource-url {
+    color: var(--color-primary);
+
+}
+
+
+.col-action {
+    text-align: right;
+}
+
+.btn-go {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-go:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-go svg {
+    width: 12px;
+    height: 12px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/*
+           АДАПТИВНІСТЬ
+        ========================================= */
+@media (max-width: 768px) {
+    .table-row {
+
+        grid-template-columns: 1fr 110px;
+    }
+
+    .col-id {
+        display: none;
+    }
+
+    .col-resource,
+    .col-action {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .table-head {
+        display: none;
+
+    }
+
+    .col-action {
+        text-align: left;
+        padding-top: 0;
+    }
+
+    .btn-go {
+        width: 100%;
+
+    }
+}
+
+/* =========================================
+           ОСНОВНА КАРТКА КОНТАКТІВ
+        ========================================= */
+
+.contacts-page {
+    background-color: #fff;
+}
+
+.contacts-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 40px 50px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.card-section {
+    margin-bottom: 35px;
+}
+
+.card-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+/* Назва організації */
+.org-title-ua {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.org-title-en {
+    font-size: 13px;
+    color: #9ba7b6;
+}
+
+/* Розділювач */
+.divider {
+    height: 1px;
+    background-color: var(--color-border);
+    border: none;
+    margin: 35px 0;
+}
+
+/* Список контактів */
+.contact-list {
+    display: grid;
+    gap: 25px;
+    /* Відстань між блоками контактів */
+    padding-left: 20px;
+    /* Зсув тексту контактів відносно заголовка */
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.contact-value {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a.contact-value {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+a.contact-value:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* =========================================
+           БАНЕР ЧЛЕНСТВА (Синій)
+        ========================================= */
+.member-banner {
+    background-color: var(--color-primary-light);
+    border-radius: 8px;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(42, 106, 155, 0.15);
+}
+
+.banner-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.banner-text {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 800px;
+    color: #e0effc;
+}
+
+.btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: var(--color-primary-light);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-white:hover {
+    background-color: #f0f7ff;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+           АДАПТИВНІСТЬ
+        ========================================= */
+@media (max-width: 768px) {
+    .contacts-card {
+        padding: 30px 20px;
+    }
+
+    .member-banner {
+        padding: 30px 20px;
+    }
+
+    .contact-list {
+        padding-left: 0;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+}
+
+.phone-dropdown .dropdown-menu-item {
+    cursor: pointer;
+    position: relative;
+    /* ⚠️ Переконуємося, що пункт меню стоїть вище за інші елементи */
+    z-index: 105;
+}
+
+/* 🚀 МАГІЧНИЙ РЯДОК: Забороняємо тексту та прапорам перехоплювати клік у самого пункту */
+.phone-dropdown .dropdown-menu-item * {
+    pointer-events: none;
+}
+
+#formResponse {
+    transition: all 0.4s ease;
+}
+
+
+.form-alert {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 15px;
+    border: 1px solid transparent;
+    animation: slideInAlert 0.3s ease forwards;
+}
+
+
+.form-alert .alert-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.form-alert .alert-text {
+    font-weight: 500;
+}
+
+
+.alert-success {
+    background-color: #f0fdf4;
+    border-color: #bbf7d0;
+    color: #166534;
+}
+
+
+.alert-error {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+
+.alert-loading {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+    color: #475569;
+}
+
+
+.alert-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #cbd5e1;
+    border-top-color: #64748b;
+    border-radius: 50%;
+    animation: alertSpin 0.8s linear infinite;
+    display: inline-block;
+}
+
+
+@keyframes slideInAlert {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes alertSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Глобальний градієнт, який лягає на обрізаний main */
+.paywall-global-overlay {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    /* Трохи збільшили висоту для більшої плавності */
+
+    /* Текст розчиняється в повністю прозорий, а потім переходить у твій темно-синій */
+    background: linear-gradient(to bottom, rgba(26, 66, 115, 0) 0%, var(--color-primary) 100%);
+
+    z-index: 99;
+    pointer-events: none;
+}
+
+/* Якщо твій сайт має темний фон, заміни #ffffff у градієнті вище та в блоці нижче на колір свого фону */
+
+/* Плашка з кнопками авторизації перед футером */
+.paywall-global-box {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--color-primary);
+    /* Залишаємо суцільним */
+    position: relative;
+    z-index: 100;
+    margin-top: -1px;
+    /* Стягуємо стик */
+    border-radius: 0;
+    /* Рівний стик із синім туманом */
+}
+
+.paywall-global-box h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-bg-light);
+    margin-bottom: 12px;
+}
+
+.paywall-global-box p {
+    color: var(--color-bg-light);
+    opacity: 0.8;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    line-height: 1.5;
+}
+
+/* Кнопки всередині пейволу */
+.paywall-global-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.paywall-global-buttons .p-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.25s ease;
+}
+
+.paywall-global-buttons .p-btn-primary {
+    background: var(--color-bg-light);
+    color: var(--color-primary);
+}
+
+.paywall-global-buttons .p-btn-primary:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-border);
+}
+
+.paywall-global-buttons .p-btn-outline {
+    border: 1px solid var(--color-bg-light);
+    color: var(--color-bg-light);
+    background: transparent;
+}
+
+.paywall-global-buttons .p-btn-outline:hover {
+    color: #f8fafc;
+    border-color: #94a3b8;
+}
+
+/* ==========================================================================
+   СТИЛІ МОДАЛЬНОГО ВІКНА (AUTH POPUP) ПІД ФІРМОВУ ПАЛІТРУ
+   ========================================================================== */
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(22, 39, 67, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-content {
+    background: var(--color-bg);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+
+    box-shadow: 0 20px 50px rgba(26, 66, 115, 0.15);
+    border: 1px solid var(--color-border);
+    animation: modalFadeUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: var(--color-primary-hover);
+    transform: scale(1.1);
+}
+
+
+.auth-tabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.auth-tab-btn {
+    padding-bottom: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-text-muted);
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.auth-tab-btn:hover {
+    color: var(--color-text-dark);
+}
+
+
+.auth-tab-btn.active {
+    color: var(--color-primary);
+}
+
+.auth-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 3px 3px 0 0;
+}
+
+
+.modal-content .consult-form input[type="text"],
+.modal-content .consult-form input[type="email"],
+.modal-content .consult-form input[type="password"],
+.modal-content .consult-form input[type="tel"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-bg-light);
+    color: var(--color-text-dark);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+
+.modal-content .consult-form input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(26, 66, 115, 0.1);
+}
+
+
+.modal-content .btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-btn-dark);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-content .btn-submit:hover {
+    background: var(--color-btn-dark-hover);
+    transform: translateY(-1px);
+}
+
+
+.modal-content .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--color-text-gray);
+    font-size: 13px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.modal-content .checkbox-label input {
+    margin-top: 2px;
+}
+
+
+@keyframes modalFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
